@@ -16,7 +16,7 @@ public class AuthService {
 	
 	public String authenticate(String email, String pwd) {
 		Optional<User> user = userService.findByEmail(email);
-		if (user.isPresent() && user.get() .getPassword() .equals(pwd)) {
+		if (user.isPresent() && user.get() .getSenha() .equals(pwd)) {
 			String token = generateToken(user.get());
 			return String.format("{\"token\": \"%s\"}", token);			
 		}

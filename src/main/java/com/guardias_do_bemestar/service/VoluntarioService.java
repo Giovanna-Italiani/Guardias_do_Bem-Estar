@@ -7,19 +7,19 @@ import org.springframework.stereotype.Service;
 
 import com.guardias_do_bemestar.model.User;
 import com.guardias_do_bemestar.model.Voluntario;
-import com.guardias_do_bemestar.repository.UserRepository;
+import com.guardias_do_bemestar.repository.VoluntarioRepository;
 
 @Service
 public class VoluntarioService {
 	@Autowired
-	private UserRepository userRepository;
+	private VoluntarioRepository voluntarioRepository;
 	
 	public Voluntario save(Voluntario voluntario) {
-		return userRepository.save(voluntario);
+		return voluntarioRepository.save(voluntario);
 	}
 	
 	public Optional<User> findByEmail(String email) {
-		return userRepository.findFirstByEmail(email);
+		return voluntarioRepository.findFirstByEmail(email);
 	}
 }
 

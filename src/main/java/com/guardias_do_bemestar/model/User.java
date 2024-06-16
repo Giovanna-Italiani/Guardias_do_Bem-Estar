@@ -13,37 +13,90 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String nome;
-	private String endereco;
-	private Integer idade;
-	private String sexo;
 	private String email;
-	private Integer cpf;
-	private String senha;
+	private String telefone;
+	private String cpf;
+	private String cep;
+	private String uf;
+	private String cidade;
+	private String endereco;
+	private String numero;
+	private String idade;
+	private String sexo;
 	private String nickname;
+	private String senha;
 	
 	
-	//Construtores
 	public User() {
 	}
-	public User(Integer id, String email, String password, String nickname, String nome, String endereco, Integer idade, 
-			String sexo, Integer cpf ) {
+	public User(Integer id, String nome, String email, String telefone, String cpf, String cep, String uf, String cidade, 
+			String endereco, String numero, String idade, String sexo, String nickname, String senha  ) {
 		super();
 		this.id = id;
 		this.nome = nome; 
+		this.email = email;
+		this.telefone = telefone;
+		this.cpf = cpf;
+		this.cep = cep;
+		this.uf = uf;
+		this.cidade = cidade;
 		this.endereco = endereco;
+		this.numero = numero;
 		this.idade = idade;
 		this.sexo = sexo;
-		this.email = email;
-		this.cpf = cpf;
-		this.senha = password;
 		this.nickname = nickname;
+		this.senha = senha;
 	}
 	
+	
+	//GETTER AND SETTERS
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getTelefone() {
+		return telefone;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getCep() {
+		return cep;
+	}
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+	public String getUf() {
+		return uf;
+	}
+	public void setUf(String uf) {
+		this.uf = uf;
+	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
 	}
 	public String getEndereco() {
 		return endereco;
@@ -51,10 +104,16 @@ public class User {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public Integer getIdade() {
+	public String getNumero() {
+		return numero;
+	}
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+	public String getIdade() {
 		return idade;
 	}
-	public void setIdade(Integer idade) {
+	public void setIdade(String idade) {
 		this.idade = idade;
 	}
 	public String getSexo() {
@@ -63,11 +122,11 @@ public class User {
 	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
-	public Integer getCpf() {
-		return cpf;
+	public String getNickname() {
+		return nickname;
 	}
-	public void setCpf(Integer cpf) {
-		this.cpf = cpf;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 	public String getSenha() {
 		return senha;
@@ -75,30 +134,5 @@ public class User {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	//Getters and Setters
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getPassword() {
-		return senha;
-	}
-	public void setPassword(String password) {
-		this.senha = password;
-	}
-	public String getNickname() {
-		return nickname;
-	}
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
- 	}
-
+	
 }
